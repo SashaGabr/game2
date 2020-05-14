@@ -23,10 +23,10 @@ function addItems() {
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(250, 550, 'platform2');
-  platforms.create(500, 400, 'platform2');
+  platforms.create(500, 200, 'platform2');
+  platforms.create(400, 350, 'platform2');
   platforms.create(550, 350, 'platform2');
-  platforms.create(100, 200, 'platform2');
+  platforms.create(250, 500, 'platform2');
   platforms.setAll('body.immovable', true);
 }
 
@@ -49,7 +49,7 @@ function createBadge() {
 function itemHandler(player, item) {
   item.kill();
   if (item.key === 'coin') {
-     currentScore = currentScore + 15;
+     currentScore = currentScore + 20;
   } else if (item.key === 'poison') {
      currentScore = currentScore - 10;
   } else if (item.key === 'star') {
