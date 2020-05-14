@@ -23,7 +23,7 @@ function addItems() {
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(750, 600, 'platform2');
+  platforms.create(750, 550, 'platform2');
   platforms.create(300, 450, 'platform2');
   platforms.create(400, 350, 'platform2');
   platforms.create(100, 100, 'platform2');
@@ -134,7 +134,7 @@ window.onload = function () {
       player.body.velocity.y = -400;
     }
     // when the player winw the game
-    if (won) {
+    if (currentScore >= 100) {
       winningMessage.text = "YOU WIN!!!";
     }
   }
