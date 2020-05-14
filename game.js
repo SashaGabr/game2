@@ -15,9 +15,11 @@ var winningScore = 100;
 // add collectable items to the game
 function addItems() {
   items = game.add.physicsGroup();
-  createItem(225, 200, 'coin');
-  createItem(375, 100, 'poison');
-  createItem(125, 50, 'star');
+  createItem(275, 475, 'coin');
+  createItem(425, 325, 'coin');
+  createItem(525, 175, 'coin');
+  createItem(110, 125, 'poison');
+  createItem(125, 125, 'star');
 }
 
 // add platforms to the game
@@ -25,7 +27,7 @@ function addPlatforms() {
   platforms = game.add.physicsGroup();
   platforms.create(500, 200, 'platform2');
   platforms.create(400, 350, 'platform2');
-  platforms.create(550, 350, 'platform2');
+  platforms.create(250, 500, 'platform2');
   platforms.create(100, 150, 'platform2');
   platforms.setAll('body.immovable', true);
 }
@@ -53,7 +55,7 @@ function itemHandler(player, item) {
   } else if (item.key === 'poison') {
      currentScore = currentScore - 10;
   } else if (item.key === 'star') {
-     currentScore = currentScore + 40;
+     currentScore = currentScore + 45;
   }
   if (currentScore === winningScore) {
       createBadge();
