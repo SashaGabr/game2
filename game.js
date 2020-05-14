@@ -23,7 +23,7 @@ function addItems() {
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(550, 100, 'platform2');
+  platforms.create(750, 600, 'platform2');
   platforms.create(300, 450, 'platform2');
   platforms.create(400, 350, 'platform2');
   platforms.create(100, 100, 'platform2');
